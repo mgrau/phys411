@@ -1,0 +1,345 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started">&#182;</a></h1><p>You can use these buttons below to launch this Jupyter notebook in either <a href="https://mybinder.org/">binder</a> or <a href="https://colab.research.google.com/">Colab</a>. Play around with each service, they have their own advantages. Colab will startup faster, but you may have to install your own dependencies using the <code>!pip</code> command. You will also need to be signed in with a google account. Binder doesn't require any account to use, but it does take sometimes several minutes to startup.</p>
+<p><a href="http://beta.mybinder.org/v2/gh/mgrau/phys411/main?urlpath=%2Ftree/Homework%201.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder"></a></p>
+<p><a href="https://colab.research.google.com/github/mgrau/phys411/blob/main/Homework%201.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<p>You can also download and run this notebook on your own computer, provided you have a suitable Python installation.</p>
+<p>When you are finished with your work, please print to PDF to submit.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction-to-Jupyter-Notebooks">Introduction to Jupyter Notebooks<a class="anchor-link" href="#Introduction-to-Jupyter-Notebooks">&#182;</a></h2><p>Jupyter notebooks are an interactive document that can contain rich text (like you are reading now), as well as code (like you may see in the block below). In this class we will be using them to perform calculations for your homework assignments, plot figures, and write text to document your work.</p>
+<p>Below this cell you will see a block of Python code. You can run it either by selecting the cell and clicking the Run button
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAAeCAYAAACfWhZxAAABV2lDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx//ahpIGEUEXC6EOBRqldq1sDxJ52Mywuq3PTYV1e+xuVN+hQ3Xo3Klrl0DoEB06eI8s+gB9gcCLyTbPrVaLBob58ef/ZuYN4JdUznUJQM2wzVxmNbq9sxsNvCGICYxjGCGVWTytKFmy4Lv2R6sJn6iPcdHrNvyQn35ajsRP15tn2eDkX39fDJU0i1H9oIwxbtqAb4ZYObS54CPiMZOWIj4RXHb5UnDR5ZuuJ5+TiRvEI6yilohfRM9ij17u4Zp+wL52ENuHNWNrU+iUEWSQRAoFbEBGFOl/vKmuV8Y+OI5hoooyKrDFC1I4dGjEazDAMIcYcQLzlAlx49+387TzK2BpgaDhaSuLwLVG32SeNtUGRqvAnZ+rpvpzUV9LsvaSCZdDdWDwwnHeC0BgFug8O0677jgdmjHwCty3PgH3GmA3WcP4BQAAAFZlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA5KGAAcAAAASAAAARKACAAQAAAABAAAAPaADAAQAAAABAAAAHgAAAABBU0NJSQAAAFNjcmVlbnNob3TIzwxEAAAB1GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4zMDwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj42MTwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlVzZXJDb21tZW50PlNjcmVlbnNob3Q8L2V4aWY6VXNlckNvbW1lbnQ+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpHYLU0AAADFElEQVRYCe1YTUhqQRT+NPtzURslwlwF0cp+ICGCiMgWQVIg1spqVRshMFyEC3Mr1sa2tbCNIFS0jJaFuCjapVAaZAZFRCQIlr575nHl6rO6ejPee7cDcueec+bMfPPNOTNXRZ4TyEyUMsPL4MoStIqgv7y84Pb2Fg8PD/IgnnI6Go3mn56eqPlfyvHxcREutr2J4dbWVnmwzKGUZU7/gH5vf9/f3yObzb5n/uf0rHp/NutQKISDgwMsLy9jfHz8M/ey9lQqhZOTkyKbRqOB0WhEc3Nzkb7WL6JA0yRubm6wsrKCnp4eOBwO9Pb2VjS3q6srrK2tYWBgACrV72G5UwOPj49YX1/H2NhYRfGkOIsGzQ9yfn4Om80Gk8nEmNfr9bxJ1HNjYwMtLS3M9+3tDaurq9ja2vpW0FUXssPDQ0xNTcHr9eL5+VkU4FKnuro69Pf3Ix6PgztIsbe3B7fbXXCjOjI9Pc3ssVgMc3NzCAaDmJiYgMFggMfjAS1cpVIx08IBaFKBQAD7+/tYXFzE7Ows6uvrhS5/tO/u7pBOp5HL5ZBMJrGzswOz2QyFQgHugsTSiO9EC3F5eYlMJsMK6dnZGct/SodEIgGn04mRkREMDw/zXUQ9JYHmRyCmfT4fGhoaMDMzw6vLPi0WS5G+ra0NS0tLRbqPXlwuFzo6OtDd3Y3t7W12ff7Iv5yt6u0tDDY0NASq8J8Bpj5HR0eIRCLst7u7y8Jsbm4Kw33Ybm9vL9ip6r++vhbexTYkMd3V1cUq+eDgoNjx0NjYiKamJubf2dmJyclJhMPhQn8hCKrspUJpIFWqAq3VamG321kuKpXSNgsxR194JBT39PQUFxcX0Ol08Pv9UvGV7V8RaLVajfn5efbj2SobtYySZ6h0kQgoMXp9fY3R0VH09fXBarWyCAsLC4VIpf0Khmoa9M1V+ulFOqFwBSPPHSV57joqVNesTeNwFfvL4pfiE8U0sfudQtfTWoq0hKzlzGoY+wd0DRf3rwotX6apcNC9Vy6ioHNBbn8BM9ByYZjHKd+c5ldALs9fXv3S9tZCoY8AAAAASUVORK5CYII=" alt="image.png">
+or in Colab clicking the triagle to the left of the cell
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAABV2lDQ1BJQ0MgUHJvZmlsZQAAKJF1kEFLAlEQx//ahpIGEUEXC6EOBRqldq1sDxJ52Mywuq3PTYV1e+xuVN+hQ3Xo3Klrl0DoEB06eI8s+gB9gcCLyTbPrVaLBob58ef/ZuYN4JdUznUJQM2wzVxmNbq9sxsNvCGICYxjGCGVWTytKFmy4Lv2R6sJn6iPcdHrNvyQn35ajsRP15tn2eDkX39fDJU0i1H9oIwxbtqAb4ZYObS54CPiMZOWIj4RXHb5UnDR5ZuuJ5+TiRvEI6yilohfRM9ij17u4Zp+wL52ENuHNWNrU+iUEWSQRAoFbEBGFOl/vKmuV8Y+OI5hoooyKrDFC1I4dGjEazDAMIcYcQLzlAlx49+387TzK2BpgaDhaSuLwLVG32SeNtUGRqvAnZ+rpvpzUV9LsvaSCZdDdWDwwnHeC0BgFug8O0677jgdmjHwCty3PgH3GmA3WcP4BQAAAFZlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA5KGAAcAAAASAAAARKACAAQAAAABAAAAIaADAAQAAAABAAAAIAAAAABBU0NJSQAAAFNjcmVlbnNob3QrDgEgAAAB1GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4zMjwvZXhpZjpQaXhlbFlEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4zMzwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlVzZXJDb21tZW50PlNjcmVlbnNob3Q8L2V4aWY6VXNlckNvbW1lbnQ+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgqeUkJcAAABZklEQVRYCe2W3Y2DQAyEyemKgW5IOVRAOdANSBST00c00SrCP3sSSh7wA17B2jMee4Hbtm2P5sP282H8Hf4ioS5cSnyVEr9ik/XrujbLsjR4DN/3/b7uuq5p23Zf11xu2fcEYNM0vcAtEEjc7/cqMikSgM/zbOEe3kcdyGQsPB3/IQAwpInNmEuCFtQqUIISq9kp77+vXRJeJdkB9HKIjEmCCrwqhmF4nQolO/JRHmJMEhzDyBg8HU9vb5TLJOElLZ9BBFW89niKksskUTOQEMi2pyxAa5OEV5mCsz5Sovq1fQQMCKfAAovmxiSBElbSkgjgNa0rY7U228HHKLIsgSiXSQIlvLkYxzGlQJSHQk0SPPQ+QJlWRTl4jrkkqCIaqmea4yuxnpqKckmwKftWVEJ5CHhKah8+9T/BxugYsgejcsAzCjwjKkgoADL6FnA0BYY//fdOJM7w4UycAfqe8yIhRb5CiT/LVZ4Mg/SGswAAAABJRU5ErkJggg==" alt="image-2.png">
+You can also select the cell and press <code>Ctrl-Enter</code>. You should see the output of the cell printed below.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>
+<span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6.28</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Plotting-with-Matplotlib">Plotting with Matplotlib<a class="anchor-link" href="#Plotting-with-Matplotlib">&#182;</a></h2><p>For some of the problems below you will need to import matplotlib by running the following <code>import</code> command, which imports the <code>pyplot</code> module from the <code>matplotlib</code> library and renames it to the shorter variable <code>plt</code> for our convienence (this is somewhat of a convention).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-1---Atomic-Units">Problem 1 - Atomic Units<a class="anchor-link" href="#Problem-1---Atomic-Units">&#182;</a></h1><p>Calculate the following quantities in atomic units:</p>
+<ul>
+<li>The diameter of the Earth</li>
+<li>The speed of sound</li>
+<li>The rest mass of the electron $E = m_e c^2$</li>
+<li>The acceleration due to gravity at the earth's surface</li>
+<li>The frequency of the standard tuning pitch A440 (440 Hz)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You might find the unit conversion library <a href="https://pint.readthedocs.io/en/stable/"><code>pint</code></a> a useful tool for this problem. On Colab you will need to install it by running the following cell</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install pint
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can use <code>pint</code> by importing it, creating what is called a unit registry, and then using this for unit conversions. I'll include some examples below</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pint</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">pint</span><span class="o">.</span><span class="n">UnitRegistry</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="s1">&#39;atomic&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="s1">&#39;1 foot&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;meters&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="s1">&#39;1 yard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;a0&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="s1">&#39;1 yard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="s1">&#39;1 furlong / fortnight&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="s1">&#39;1 furlong / fortnight&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_base_units</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0.30479999999999996 meter
+17279655683.546116 bohr
+17279655683.546116 bohr
+5.547499678235289e-13 speed_of_light
+7.602071608227138e-11 bohr / atomic_unit_of_time
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-2---Hydrogen-Gross-Structure">Problem 2 - Hydrogen Gross Structure<a class="anchor-link" href="#Problem-2---Hydrogen-Gross-Structure">&#182;</a></h1><p>Write a function that will predict the wavelength of light emitted by a hydrogen atom when it decays from a level with principal quantum number <code>np</code> ($n'$) to principal quantum number <code>n</code>.</p>
+<p>Use this function to create two figures, one comparing the calculated wavelength with the measured wavelength of the hydrogen Lyman series (given below), and another</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">wavelength</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="p">):</span>
+    <span class="k">return</span> <span class="c1"># write an expression here to calculate the wavelength.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Hydrogen Lyman series data, in the form (n&#39;, n, wavelength (nm))</span>
+<span class="n">lyman</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">121.56701</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">102.57220</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">97.253650</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">94.974287</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">93.780331</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mf">93.0748142</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">92.6225605</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mf">92.3150275</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">92.0963006</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">91.9351334</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">measured_wavelength</span> <span class="ow">in</span> <span class="n">lyman</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">measured_wavelength</span><span class="p">,</span> <span class="n">wavelength</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="p">),</span> <span class="s1">&#39;ko&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measured Wavelength (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Calculated Wavelength (nm)&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">measured_wavelength</span> <span class="ow">in</span> <span class="n">lyman</span><span class="p">:</span>
+    <span class="c1">#plt.plot(np, ... complete this line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Upper state principal quantum number (n</span><span class="se">\&#39;</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Measured Wavelength - Calculated Wavelength (nm)&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-3---Isotope-Shift">Problem 3 - Isotope Shift<a class="anchor-link" href="#Problem-3---Isotope-Shift">&#182;</a></h1><p>For a nucleus with finite mass $M$ the equations of motion of the atom are no longer determined by the mass of the electron, but the reduced mass of the nucleus-electron system,
+$$ \mu = \frac{m_e M}{m_e + M} $$
+define two new functions <code>wavelength_H(n, np)</code> and <code>wavelength_D(n, np)</code> for the wavelength of hydrogen and the wavelength of deuterium, using the correction of the reduced mass to the Rydberg constant. Plot the isotope shift in units of GHz as a function of principal quantum number $n$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-4---Radiative-Decay">Problem 4 - Radiative Decay<a class="anchor-link" href="#Problem-4---Radiative-Decay">&#182;</a></h1><p>The classical radiative lifetime $\tau$ is given by the time it takes an electric dipole $e x_0$  oscillating at frequency $\omega$ and radiating power
+$$P = \frac{e^2 x_0^2 \omega^4}{12 \pi \epsilon_0 c^3}$$
+to dissipate the classical harmonic oscillator energy $E = \frac{1}{2} m_e \omega^2 x_0^2$.
+$$\tau = \frac{E}{P} = \frac{\frac{1}{2} m_e \omega^2 x_0^2}{\frac{e^2 x_0^2 \omega^4}{12 \pi \epsilon_0 c^3}} = \frac{6 \pi \epsilon_0 m_e c^3}{e^2 \omega^2}$$
+This is the fastest time that an atom could possibly decay.</p>
+<p>Alternatively, you can calculate the time it would take an electron in a circular orbit with radius $r$ and an electric dipole momenty of $e r$ to radiate energy $E = \hbar \omega$. Calculate this, and show that the lifetime is proportional to $\omega^{-3}$.</p>
+<p>Calculate the classical lifetime of the following transitions for alkali atoms and alkaline earth ions taken from the <a href="https://physics.nist.gov/PhysRefData/ASD/lines_form.html">NIST ASD</a>.</p>
+<p>Make a plot of $\tau$ against $\omega^{-2}$ and another plot of $\tau$ against $\omega{^-3}$. Which is the correct description of this data, and why?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># NIST ASD transition data in the form (wavelength (nm), lifetime (s^-1))</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mf">589.755</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">6.14e+07</span><span class="p">),</span> <span class="c1"># Na 3s-3p</span>
+    <span class="p">(</span><span class="mf">770.108</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">3.734e+07</span><span class="p">),</span> <span class="c1"># K 4s-4p</span>
+    <span class="p">(</span><span class="mf">794.978</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">3.61e+07</span><span class="p">),</span> <span class="c1"># Rb 5s-5p</span>
+    <span class="p">(</span><span class="mf">894.593</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">2.863e+07</span><span class="p">),</span> <span class="c1"># Cs 6s-6p</span>
+    <span class="p">(</span><span class="mf">280.353</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">2.57e+08</span><span class="p">),</span> <span class="c1"># Mg+ 3s-3p</span>
+    <span class="p">(</span><span class="mf">396.959</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">1.4e+08</span><span class="p">),</span> <span class="c1"># Ca+ 4s-4p</span>
+    <span class="p">(</span><span class="mf">421.671</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">1.279e+08</span><span class="p">),</span> <span class="c1"># Sr+ 5s-5p</span>
+    <span class="p">(</span><span class="mf">493.545</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">9.53e+07</span><span class="p">)</span> <span class="c1"># Ba+ 6s-6p</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now compare to the below data for just sodium transitions, again making plots of $\tau$ against $\omega^{-2}$ and another plot of $\tau$ against $\omega{^-3}$. Which is the correct description of this data, and why?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># NIST ASD transition data for sodium in the form (wavelength (nm), lifetime (s^-1))</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mf">589.755</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">6.14e+07</span><span class="p">),</span> <span class="c1"># Na 3s-3p</span>
+    <span class="p">(</span><span class="mf">330.393</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">2.73e+06</span><span class="p">),</span> <span class="c1"># Na 3s-4p</span>
+    <span class="p">(</span><span class="mf">285.385</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">5.31e+05</span><span class="p">),</span> <span class="c1"># Na 3s-5p</span>
+    <span class="p">(</span><span class="mf">268.122</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">1.81e+05</span><span class="p">),</span> <span class="c1"># Na 3s-6p</span>
+    <span class="p">(</span><span class="mf">259.471</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">7.96e+04</span><span class="p">),</span> <span class="c1"># Na 3s-7p</span>
+    <span class="p">(</span><span class="mf">254.464</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mf">4.35e+04</span><span class="p">),</span> <span class="c1"># Na 3s-8p</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-5---Relativistic-Shift">Problem 5 - Relativistic Shift<a class="anchor-link" href="#Problem-5---Relativistic-Shift">&#182;</a></h1><p>An electron moving at relativistic speeds has an energy $E(v) = \gamma m c^2$, where $\gamma = 1/\sqrt{1-v^2/c^2}$, giving rise to an excess energy $E(v) - E(0) = (\gamma -1)m_e c^2$. This produces a fractional relativistic energy shift $\Delta E/E \approx v^2/c^2 \propto \alpha^2/n^2$.</p>
+<p>Consider the spectral data for the alkali atoms and alkaline earth ions. For each atom there are two transitions, with so-called ``fine'' splitting between them due to, among other things, the relativistic shift. Calculate this shift in units of THz and plot it against $Z^\delta$, where $\delta$ is some power, to find a linear relationship. Show that the slope of this is approximately (within an order of magnitude) of $\alpha^2$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># NIST ASD transition data for alkalis in the form (Z, wavelenght(nm), wavelength(nm))</span>
+<span class="n">data3</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">121.5673644608</span><span class="p">,</span> <span class="mf">121.5668237310</span><span class="p">),</span> <span class="c1"># H 1s-1p</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">670.976</span><span class="p">,</span> <span class="mf">670.961</span><span class="p">),</span> <span class="c1"># Li 2s-2p</span>
+    <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">589.755</span><span class="p">,</span> <span class="mf">589.158</span><span class="p">),</span> <span class="c1"># Na 3s-3p</span>
+    <span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mf">770.108</span><span class="p">,</span> <span class="mf">766.700</span><span class="p">),</span> <span class="c1"># K 4s-4p</span>
+    <span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mf">794.978</span><span class="p">,</span> <span class="mf">780.241</span><span class="p">),</span> <span class="c1"># Rb 5s-5p</span>
+    <span class="p">(</span><span class="mi">55</span><span class="p">,</span> <span class="mf">894.593</span><span class="p">,</span> <span class="mf">852.347</span><span class="p">),</span> <span class="c1"># Cs 6s-6p</span>
+    <span class="p">(</span><span class="mi">87</span><span class="p">,</span> <span class="mf">817.166</span><span class="p">,</span> <span class="mf">718.185</span><span class="p">)</span> <span class="c1"># Fr 7s-7p</span>
+<span class="p">]</span>
+
+<span class="c1"># NIST ASD transition data for alkaline earth ions in the form (Z, wavelenght(nm), wavelength(nm))</span>
+<span class="n">data4</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">313.197</span><span class="p">,</span> <span class="mf">313.132</span><span class="p">),</span> <span class="c1"># Be+ 2s-2p</span>
+    <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mf">280.353</span><span class="p">,</span> <span class="mf">279.635</span><span class="p">),</span> <span class="c1"># Mg+ 3s-3p</span>
+    <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mf">396.959</span><span class="p">,</span> <span class="mf">393.477</span><span class="p">),</span> <span class="c1"># Ca+ 4s-4p</span>
+    <span class="p">(</span><span class="mi">38</span><span class="p">,</span> <span class="mf">421.671</span><span class="p">,</span> <span class="mf">407.886</span><span class="p">),</span> <span class="c1"># Sr+ 5s-5p</span>
+    <span class="p">(</span><span class="mi">56</span><span class="p">,</span> <span class="mf">493.545</span><span class="p">,</span> <span class="mf">455.531</span><span class="p">),</span> <span class="c1"># Ba+ 6s-6p</span>
+    <span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mf">468.354</span><span class="p">,</span> <span class="mf">381.550</span><span class="p">)</span> <span class="c1"># Ra+ 7s-7p</span>
+<span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
